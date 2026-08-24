@@ -1,0 +1,148 @@
+configuration {
+	modes: "drun,run,filebrowser,window";
+	font: "JetBrainsMono Nerd Font 12";
+    icon-theme: "Papirus";
+    show-icons: true; 
+	location: 8;
+    display-drun: "";
+    display-run: "";
+    display-filebrowser: "";
+    display-window: "";
+	drun-display-format: "{name}";
+	window-format: "{w} · {c} · {t}";
+
+    timeout {
+        action: "kb-cancel";
+        delay: 0;
+    } 
+
+    filebrowser {
+        directories-first: true;
+        sorting-method: "name";
+    }
+}
+
+window {
+    height: 90%;
+    width: 22%;
+    x-offset: 20px;
+    border-radius: 6px;
+    border: 2px solid;
+    padding: 6px;
+
+    border-color: #e8d5a3;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+* {
+    bg: #1a1a1a;
+    bg-alt: #211d21;
+    bg-hover: #2a1d2e;
+    rose: #ffb7c5;
+    rose-dim: #4a303a;
+    fg: #f6edf0;
+    fg-muted: #c9b8bf;
+}
+
+mainbox {
+    enabled: true;
+    spacing: 10px;
+    margin: 0px;
+    border: 0px solid;
+    background-color: @bg;
+    children: [ "inputbar", "listview", "mode-switcher" ];
+}
+
+inputbar {
+    enabled: true;
+    margin-left: 4px;
+    padding: 10px 10px 4px 10px;
+    text-color: @fg;
+    background-color: @bg;
+    children: [ "prompt", "entry" ];
+    border: 0 0 2px 0;
+    border-color: @rose;
+}
+
+prompt {
+    enabled: true;
+    padding: 0px 16px 0px 0px;
+    background-color: inherit;
+    text-color: inherit;
+}
+
+listview {
+    color: @fg;
+    background-color: @bg;
+    scrollbar: false;
+    border: 0px;
+    spacing: 4px;
+}
+
+entry {
+    color: @fg;
+    background-color: inherit;
+    width: 20px;
+}
+
+element {
+    padding: 7px 10px;
+    border-radius: 4px;
+    background-color: @bg-alt;
+    text-color: @fg;
+}
+
+element alternate.normal {
+    background-color: #241f24;
+    text-color: @fg;
+}
+
+element normal.normal {
+    background-color: @bg-alt;
+    text-color: @fg;
+}
+
+element selected.normal,
+element selected.active,
+element selected.urgent {
+    background-color: @rose;
+    text-color: @bg;
+}
+
+element normal.active,
+element alternate.active {
+    background-color: @rose-dim;
+    text-color: @rose;
+}
+
+element normal.urgent,
+element alternate.urgent {
+    background-color: #3b242b;
+    text-color: @rose;
+}
+
+element-text,
+element-icon {
+    background-color: transparent;
+    text-color: inherit;
+}
+
+mode-switcher {
+    enabled: true;
+    spacing: 6px;
+    padding: 0px 4px 4px 4px;
+    background-color: @bg;
+}
+
+button {
+    padding: 7px 10px;
+    border-radius: 4px;
+    background-color: @bg-alt;
+    text-color: @fg;
+}
+
+button selected {
+    background-color: @rose;
+    text-color: @bg;
+}

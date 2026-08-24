@@ -1,0 +1,15 @@
+window.nautilus-window {
+    background-color: rgba(30, 30, 30, 0.55);
+}
+
+.starred-viewport {
+    background-color: rgba(30, 30, 30, 0.55);
+}
+
+.nautilus-window .sidebar-pane {
+    background-color: rgba(20, 20, 20, 0.5);
+}
+
+.view {
+    background-color: rgba(30, 30, 30, 0.55);
+}

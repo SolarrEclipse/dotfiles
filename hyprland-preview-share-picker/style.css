@@ -1,0 +1,36 @@
+@define-color bg #111111;
+
+.tab-label {
+    background-color: @bg;
+}
+
+.notebook header {
+    background-color: @bg;
+}
+
+.notebook header tabs {
+}
+.window {
+    background-color: @bg;
+}
+
+.page {
+    background-color: @bg;
+}
+
+.card {
+    background-color: @bg;
+}
+
+.image {
+}
+
+.image-label {
+}
+
+.notebook {
+    background-color: @bg;
+}
+
+.region-button {
+}

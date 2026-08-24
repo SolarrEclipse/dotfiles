@@ -13,8 +13,10 @@ return {
 
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = function(_, opts)
-      opts.ensure_installed = {
+    lazy = false,
+    build = ":TSUpdate | TSInstallAll",
+    opts = {
+      ensure_installed = {
         "bash",
         "c",
         "cpp",
@@ -43,7 +45,9 @@ return {
         "vue",
         "yaml",
       }
-      return opts
+    },
+    config = function(_, opts)
+      require("nvim-treesitter").setup(opts)
     end,
   },
 
